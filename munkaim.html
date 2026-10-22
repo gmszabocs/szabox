@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munkáim | Kolumbán Szabolcs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <meta property="og:image" content="https://szabox.hu/megosztasikep.jpg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+            color: #1A1A1A;
+        }
+        .underline-playful {
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+            z-index: 1;
+        }
+        .underline-playful::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: -2%;
+            width: 104%;
+            height: 8px;
+            background-color: #FF5722;
+            z-index: -1;
+            transform: rotate(-2deg);
+            border-radius: 4px;
+        }
+        .portfolio-card {
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            group: hover;
+        }
+        .portfolio-card img {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.05);
+        }
+        .portfolio-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+<header class="fixed w-full top-0 bg-[#FAFAFA]/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold tracking-tight">Kolumbán Szabolcs</a>
+        
+        <!-- Asztali menü -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="index.html" class="hover:text-[#FF5722] transition-colors">Szolgáltatások</a>
+            <a href="munkaim.html" class="hover:text-[#FF5722] transition-colors">Munkáim</a>
+            <a href="index.html" class="hover:text-[#FF5722] transition-colors">Rólam</a>
+            <a href="index.html" class="hover:text-[#FF5722] transition-colors">Kapcsolat</a>
+        </nav>
+
+        <!-- Hamburger gomb (Mobil) -->
+        <button id="mobile-menu-btn" class="md:hidden flex items-center p-2 text-gray-800 hover:text-[#FF5722] focus:outline-none transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobil menü (Lenyíló rész) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FAFAFA] border-t border-gray-100 absolute w-full shadow-lg">
+        <nav class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
+            <a href="index.html" class="mobile-link hover:text-[#FF5722] transition-colors">Szolgáltatások</a>
+            <a href="munkaim.html" class="mobile-link hover:text-[#FF5722] transition-colors">Munkáim</a>
+            <a href="index.html" class="mobile-link hover:text-[#FF5722] transition-colors">Rólam</a>
+            <a href="#kapcsolat" class="mobile-link hover:text-[#FF5722] transition-colors">Kapcsolat</a>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-grow pt-32 pb-24 md:pt-48">
+    <div class="max-w-7xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+           Kiemelt <span class="underline-playful">referencia munkáim</span>
+        </h1>
+        
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/spulni_munka.jpg" alt="spulni_munka" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+            <h3 class="text-2xl font-bold mb-2">Spulni Varróház Felsőzsolca</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/fotoh.jpg" alt="fotoh" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">fototh.hu weboldal</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/poszterek_2.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Grafika</p>
+            <h3 class="text-2xl font-bold mb-2">Dekorációs poszterek</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/helynekem.jpg" alt="helynekem" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Dekoráció tervezés és kivitelezés</p>
+            <h3 class="text-2xl font-bold mb-2">Helynekem x HEX | Miskolc</h3>
+        </div>
+    </div>
+    
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/fotoh_2.jpg" alt="fotoh_2" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">fototh.hu weboldal</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/prober2.jpg" alt="prober2" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">probergep.hu weboldal</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/prober3.jpg" alt="prober3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">probergep.hu weboldal</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/szendrey.jpg" alt="szendrey" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Kis arculat tervezés</p>
+            <h3 class="text-2xl font-bold mb-2">Szendrey kertészet Felsőzsolca</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/wanted_alls.jpg" alt="wanted_alls" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Névjegykártya tervezés</p>
+            <h3 class="text-2xl font-bold mb-2">Wanted Sound | Miskolc</h3>
+        </div>
+    </div>
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/sajobabony_1.jpg" alt="wantedsound" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Redesign, Nagy arculat</p>
+            <h3 class="text-2xl font-bold mb-2">Sajóbábony logó újratervezés</h3>
+        </div>
+    </div>
+    
+    
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/wantedsound3.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">Wanted Sound, Bnadcamp weboldal</h3>
+        </div>
+    </div>
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/wantedsound.jpg" alt="wantedsound" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">CD borító</p>
+            <h3 class="text-2xl font-bold mb-2">Wanted Sound | Miskolc</h3>
+        </div>
+    </div>
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/poszterek_1.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Grafika</p>
+            <h3 class="text-2xl font-bold mb-2">Dekorációs poszterek</h3>
+        </div>
+    </div>
+
+    
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/prober1.jpg" alt="prober1" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">probergep.hu weboldal</h3>
+        </div>
+    </div>
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/poszterek_3.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Grafika</p>
+            <h3 class="text-2xl font-bold mb-2">Dekorációs poszterek</h3>
+        </div>
+    </div>
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/acershop.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Marketing, grafika</p>
+            <h3 class="text-2xl font-bold mb-2">Acer Shop | acershop.hu </h3>
+        </div>
+    </div>
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/acershop2.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Marketing, grafika</p>
+            <h3 class="text-2xl font-bold mb-2">Acer Shop | acershop.hu </h3>
+        </div>
+    </div>
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/bandit_1.jpg" alt="wantedsound3" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Márka indentitás tervezés, csomagolástervezés</p>
+            <h3 class="text-2xl font-bold mb-2">Bandit | gamershop.hu </h3>
+        </div>
+    </div>
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/bombay.jpg" alt="bombay" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Csomagolásterv</p>
+            <h3 class="text-2xl font-bold mb-2">Bombay Brasilian summer concept</h3>
+        </div>
+    </div>
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/wantedsound2.jpg" alt="wantedsound2" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Merch, ruházati tervek</p>
+            <h3 class="text-2xl font-bold mb-2">Wanted Sound | Miskolc</h3>
+        </div>
+    </div>
+
+    <div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+        <img src="munkaim/wantedsound4.jpg" alt="wantedsound2" class="w-full h-80 object-cover">
+        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+            <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Merch, ruházati tervek</p>
+            <h3 class="text-2xl font-bold mb-2">Wanted Sound | Miskolc</h3>
+        </div>
+    </div>
+
+    <!-- 1. hungbeer_logo_8.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/hungbeer_logo_8.jpg" alt="hungbeer_logo_8" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">Hungbeer építész kft.</h3>
+    </div>
+</div>
+
+<!-- 2. ws_logo_6.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/ws_logo_6.jpg" alt="ws_logo_6" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">WS | Wanted Sound</h3>
+    </div>
+</div>
+
+<!-- 3. spulni_logo_5.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/spulni_logo_5.jpg" alt="spulni_logo_5" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">Spulni | spulni.hu</h3>
+    </div>
+</div>
+
+<!-- 4. szendrey_logo_4.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/szendrey_logo_4.jpg" alt="szendrey_logo_4" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">Garden of Szendrey</h3>
+    </div>
+</div>
+
+<!-- 5. gepkolcsonzo_logo_3.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/gepkolcsonzo_logo_3.jpg" alt="gepkolcsonzo_logo_3" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">Gépkolcsönző</h3>
+    </div>
+</div>
+
+<!-- 6. melo_logo_2.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/melo_logo_2.jpg" alt="melo_logo_2" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">melomunkaruha</h3>
+    </div>
+</div>
+
+<!-- 7. hajtuning_logo_1.jpg -->
+<div class="portfolio-card block bg-white rounded-xl shadow-sm cursor-pointer relative">
+    <img src="munkaim/hajtuning_logo_1.jpg" alt="hajtuning_logo_1" class="w-full h-80 object-cover">
+    <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+        <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+        <h3 class="text-2xl font-bold mb-2">Hajtuning</h3>
+    </div>
+</div>
+
+</div>
+
+    </div>
+</main>
+
+<section id="kapcsolat" class="py-24 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-[#FAFAFA] rounded-3xl p-10 md:p-20 border border-gray-100 flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="underline-playful">Vágjunk</span> bele!
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                        Beszéljünk a projektedről! Hívj fel, vagy dobj egy emailt, és nézzük meg, hogyan tudunk együttműködni.
+                    </p>
+                    <br> </br>
+                <div class="space-y-6">
+                    <a href="tel:+36205771308" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-[#FF5722] transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Telefon</p>
+                            <p class="text-2xl font-bold group-hover:text-[#FF5722] transition-colors">+36 20 577 1308</p>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@szabox.hu" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-[#FF5722] transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Email</p>
+                            <p class="text-2xl font-bold group-hover:text-[#FF5722] transition-colors">kolumban@szabox.hu</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+<form action="https://formspree.io/f/meeydgal" method="POST" class="space-y-6">
+    <div>
+        <label class="block text-sm font-semibold mb-2">Név</label>
+        <input type="text" name="nev" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="Kovács János">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold mb-2">Email</label>
+        <input type="email" name="email" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="hello@ceged.hu">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold mb-2">Üzenet</label>
+        <textarea rows="4" name="uzenet" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="Röviden a projektről..."></textarea>
+    </div>
+    
+    <div class="flex items-start gap-3">
+        <input type="checkbox" id="adatkezeles" name="adatkezeles" required class="mt-1 w-5 h-5 text-[#FF5722] border-gray-300 rounded focus:ring-[#FF5722] cursor-pointer shrink-0">
+        <label for="adatkezeles" class="text-sm text-gray-600 cursor-pointer select-none leading-relaxed">
+            Kijelentem, hogy megismertem és elfogadom az <a href="cookie.html" target="_blank" class="text-[#FF5722] hover:underline font-semibold">Adatkezelési Tájékoztatóban</a> foglaltakat.
+        </label>
+    </div>
+
+    <button type="submit" class="w-full bg-[#1A1A1A] text-white font-semibold py-4 rounded-lg hover:bg-[#FF5722] transition-colors">
+        Üzenet küldése
+    </button>
+</form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-white border-t border-gray-100 py-10 text-center text-sm text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2026 Kolumbán Szabolcs - szabox.hu</p>
+        <a href="cookie.html" class="hover:text-[#FF5722] transition-colors">Adatvédelem és Cookie használat</a>
+        <div class="flex space-x-6">
+            <a href="https://www.instagram.com/gm_szabocs/" class="hover:text-black transition-colors">Instagram</a>
+            <a href="https://www.behance.net/szabolcskolumban" class="hover:text-black transition-colors">Behance</a>
+            <a href="https://www.linkedin.com/in/szabolcskolumban/" class="hover:text-black transition-colors">LinkedIn</a>
+            <a href="https://www.facebook.com/profile.php?id=61593678674418" class="hover:text-black transition-colors">Facebook</a>
+        </div>
+    </div>
+</footer>
+
+<div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center opacity-0 transition-opacity duration-300">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-[#FF5722] z-50 transition-colors">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <button onclick="prevImage(event)" class="absolute left-4 md:left-10 text-white hover:text-[#FF5722] z-50 transition-colors">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="Nagyított kép" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl">
+    <button onclick="nextImage(event)" class="absolute right-4 md:right-10 text-white hover:text-[#FF5722] z-50 transition-colors">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+</div>
+
+<script>
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const images = Array.from(portfolioCards).map(card => card.querySelector('img').src);
+    let currentIndex = 0;
+    
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = images[currentIndex];
+        lightbox.classList.remove('hidden');
+        // Késleltetés az animációhoz
+        setTimeout(() => {
+            lightbox.classList.remove('opacity-0');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add('opacity-0');
+        setTimeout(() => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    function nextImage(e) {
+        if(e) e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex];
+    }
+
+    function prevImage(e) {
+        if(e) e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex];
+    }
+
+    // Kártyák kattintás eseményének beállítása
+    portfolioCards.forEach((card, index) => {
+        card.addEventListener('click', () => openLightbox(index));
+    });
+
+    // Bezárás ha a háttérre kattintunk
+    lightbox.addEventListener('click', (e) => {
+        if(e.target === lightbox) closeLightbox();
+    });
+
+    // Billentyűzet navigáció
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Kiolvassuk az URL-ből a kért kép nevét
+        const urlParams = new URLSearchParams(window.location.search);
+        const showImage = urlParams.get('show');
+
+        if (showImage) {
+            // Megkeressük az oldalon azt a képet, ami ezt a fájlnevet tartalmazza
+            const targetImg = document.querySelector(`img[src*="${showImage}"]`);
+            
+            if (targetImg) {
+                // Késleltetjük picit a kattintást, hogy a meglévő lightbox kód biztosan betöltsön
+                setTimeout(() => {
+                    targetImg.click();
+                    
+                    // URL megtisztítása, hogy egy esetleges oldalfrissítésnél ne ugorjon fel újra
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                }, 100);
+            }
+        }
+    });
+</script>
+
+<script>
+    // Mobil menü kezelése
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.mobile-link');
+
+    // Hamburger gomb kattintásra nyit/zár
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // Bármelyik linkre kattintva automatikusan bezárul a menü
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+    });
+</script>
+
+
+</body>
+</html>

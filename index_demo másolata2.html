@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>Kolumbán Szabolcs | Grafikus | Visual Artist | szabox.hu</title>
+    <meta name="description" content="Kolumbán Szabolcs, Brand Identity Designer. Letisztult arculattervezés, rebranding és vizuális stratégia kis- és középvállalkozások (KKV-k) számára.">
+    <meta name="keywords" content="brand identity, arculattervezés, rebranding, vizuális stratégia, grafikus, KKV, Kolumbán Szabolcs, UI/UX, felsőzsolca, grafika, névjegykártya készítés, arculat tervezés, dekoráció készítés">
+    <meta name="author" content="Kolumbán Szabolcs">
+    <meta property="og:image" content="https://szabox.hu/megosztasiekp.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+/* Hello Yellow badge — beilleszthető CSS */
+.hy-badge {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-radius: 13px;
+  isolation: isolate;
+  color: #0a0a0a;
+  text-align: left;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.hy-badge__logo {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 17px 11px 15px 15px;
+  border-radius: 13px 0 0 13px;
+  background-color: #111111;
+}
+
+.hy-badge__svg {
+  display: block;
+  width: auto;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.hy-badge__text {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 31px 0 15px;
+  border-radius: 0 13px 13px 0;
+  background-color: #fff012;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+}
+
+.hy-badge::after {
+  position: absolute;
+  z-index: 5;
+  top: -30%;
+  bottom: -30%;
+  left: 0;
+  width: 35%;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  );
+  transform: translateX(-160%) skewX(-20deg);
+}
+
+@keyframes hy-badge-shine-sweep {
+  from {
+    transform: translateX(-160%) skewX(-20deg);
+  }
+
+  to {
+    transform: translateX(320%) skewX(-20deg);
+  }
+}
+
+.hy-badge:hover::after,
+.hy-badge:focus-visible::after {
+  opacity: 1;
+  animation: hy-badge-shine-sweep 0.9s ease-out 1;
+}
+
+.hy-badge:focus-visible {
+  outline: 2px solid #fff012;
+  outline-offset: 3px;
+}
+
+/* Az oldal <html class="dark"> vagy <body class="dark"> állapotát követi. */
+html.dark .hy-badge__logo,
+body.dark .hy-badge__logo {
+  background-color: #ffffff;
+}
+
+html.dark .hy-badge__svg,
+body.dark .hy-badge__svg {
+  fill: #171717;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hy-badge:hover::after,
+  .hy-badge:focus-visible::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+    </style>
+</head>
+<body class="antialiased">
+
+<header class="fixed w-full top-0 bg-[#FAFAFA]/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-xl font-bold tracking-tight">Kolumbán Szabolcs</a>
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#szolgaltatasok" class="hover:text-[#FF5722] transition-colors">Szolgáltatások</a>
+            <a href="#munkaim" class="hover:text-[#FF5722] transition-colors">Munkáim</a>
+            <a href="#rolam" class="hover:text-[#FF5722] transition-colors">Rólam</a>
+            <a href="#kapcsolat" class="hover:text-[#FF5722] transition-colors">Kapcsolat</a>
+        </nav>
+    </div>
+</header>
+
+<section id="hero" class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <p class="text-gray-500 uppercase tracking-widest text-sm font-semibold">Grafikus | Visual Artist</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                Vizuális identitás,<br>ami <span class="underline-playful text-[#1A1A1A]">működik.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                Van egy első körös AI ötleted, terved? 
+                <br></br> 
+                 Legyünk partnerek, mond el mire gondoltál és segítek félépíteni a márkád! Jó kérdésekkel eljutunk a tiszta válaszokig, amiből egy profi végeredmény születik.
+            </p>
+            <div class="pt-4">
+                <a href="#munkaim" class="inline-block bg-[#1A1A1A] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#FF5722] hover:-translate-y-1 transition-all duration-300">
+                    Nézd meg a munkáim
+                </a>
+            </div>
+            <div class="pt-4">
+                <a href="tel:+36205771308" class="inline-block bg-[#1A1A1A] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#FF5722] hover:-translate-y-1 transition-all duration-300">
+                    +36 20/577-1308
+                </a>
+            </div>
+        </div>
+        
+<div class="md:w-1/2 w-full mt-12 md:mt-0 flex flex-col items-end">
+  <img
+    src="heroimage.jpg"
+    alt="Brand Identity"
+    class="rounded-2xl shadow-2xl object-cover w-full h-[500px]">
+
+<!-- YELLOW badge box ELEJE -->
+ <br>
+<a
+  class="hy-badge"
+  href="https://www.helloyellow.hu"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Hello Yellow – designers közösség tagja"
+>
+  <span class="hy-badge__logo">
+    <svg
+                    viewBox="0 120 1120 370"
+                   
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="hy-badge__svg"
+                    aria-hidden="true"
+                    >
+                <!-- A teljes meglévő path-lista ide kerül -->
+                <path d="M1079.08 194.636H1119.92L1060.92 385.179H1010.36L965.092 250.079L919.341 385.179H869.165L810.308 194.636H851.149L894.691 344.596L946.833 194.636H983.784L1035.1 344.596L1079.08 194.636Z"></path>
+                <path d="M690.958 389.715C632.614 389.715 588.273 343.818 588.273 288.586C588.273 233.742 632.225 189.012 690.958 189.012C749.302 189.012 793.255 233.353 793.255 288.586C793.255 344.596 748.913 389.715 690.958 389.715ZM691.347 353.931C727.909 353.931 755.914 325.148 755.914 288.974C755.914 252.801 728.298 224.796 691.347 224.796C653.618 224.796 626.002 253.19 626.002 288.974C626.002 324.759 654.007 353.931 691.347 353.931Z"></path>
+                <path d="M437.813 385.179V127.945H475.932V385.179H437.813Z"></path>
+                <path d="M518.022 385.179V127.945H556.14V385.179H518.022Z"></path>
+                <path d="M405.245 284.034V303.093H248.494C253.94 340.434 283.5 354.825 311.117 354.825C341.455 354.825 359.736 341.211 372.183 330.71L395.91 357.548C384.241 368.05 355.847 390.609 312.283 390.609C252.384 390.609 209.598 348.991 209.598 289.869C209.598 228.413 256.273 189.906 309.95 189.906C365.182 189.906 404.856 229.58 405.245 284.034ZM309.561 225.302C278.055 225.302 255.495 245.916 249.272 273.533H365.96C362.459 247.472 341.066 225.302 309.561 225.302Z"></path>
+                <path d="M103.279 334.954L156.52 198.849H197.352L86.8668 481.066H46.0354L84.0646 383.791L4.80369 198.849H48.0369L103.279 334.954Z"></path>
+                </svg>
+  </span>
+
+  <span class="hy-badge__text">
+    <span>designer</span>
+    <span>közösség tagja</span>
+  </span>
+</a>
+
+</div>
+
+                            
+
+</div>
+    </div>
+    
+</section>
+
+<section class="py-12 border-t border-gray-100 bg-[#FAFAFA] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">Akikkel már dolgoztam</p>
+        <div class="flex flex-wrap justify-center gap-8 md:gap-12 items-center">
+            
+            <div class="logo-item"><img src="logo_1.svg" alt="Logó 1" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_2.svg" alt="Logó 2" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_3.svg" alt="Logó 3" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_4.svg" alt="Logó 4" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_5.svg" alt="Logó 5" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_6.svg" alt="Logó 6" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_7.svg" alt="Logó 7" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_8.svg" alt="Logó 8" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_9.svg" alt="Logó 9" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_15.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_11.svg" alt="Logó 8" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_12.svg" alt="Logó 9" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_13.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_14.svg" alt="Logó 8" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_16.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_20.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_17.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_18.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            <div class="logo-item"><img src="logo_19.svg" alt="Logó 10" class="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"></div>
+            
+        </div>
+
+        
+    </div>
+</section>
+
+<section id="szolgaltatasok" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+            Miben tudok <span class="underline-playful">segíteni?</span>
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-8 flex items-stretch">
+            <div class="p-8 rounded-2xl bg-[#FAFAFA] border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-black group-hover:bg-[#FF5722] transition-colors text-white rounded-full flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold group-hover:text-[#FF5722] transition-colors leading-tight">Arculattervezés</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-6 flex-grow">Teljes céges megjelenés a nulláról kis- és középvállalkozásoknak. Nem csak egy logót kapsz, hanem egy olyan egységes, bizalomgerjesztő rendszert, ami kiemel a versenytársak közül.</p>
+                <div class="pt-5 border-t border-gray-200 shrink-0">
+                    <p class="text-sm font-semibold text-[#FF5722] mb-1">Mik tartoznak ide?</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">Logó, színvilág és betűtípusok meghatározása, névjegykártya, levélpapír, közösségi média sablonok, és egy arculati kézikönyv, ami összefogja ezeket.</p>
+                </div>
+            </div>
+            <div class="p-8 rounded-2xl bg-[#FAFAFA] border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-black group-hover:bg-[#FF5722] transition-colors text-white rounded-full flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold group-hover:text-[#FF5722] transition-colors leading-tight">Rebranding <br><span class="text-sm font-semibold text-gray-500 group-hover:text-[#FF5722] transition-colors">(Arculatfrissítés)</span></h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-6 flex-grow">Már működő cégeknek, akik kinőtték a jelenlegi megjelenésüket, vagy pontosan tudják, mit NEM akarnak. Megőrizzük, ami eddig is érték volt a márkádban, és modernizáljuk azt, ami már visszahúz.</p>
+                <div class="pt-5 border-t border-gray-200 shrink-0">
+                    <p class="text-sm font-semibold text-[#FF5722] mb-1">Mik tartoznak ide?</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">Régi logó újratervezése, elavult dizájnok lecserélése, új arculati elemek bevezetése, meglévő offline anyagok (molinók, szórólapok, járműdekoráció) frissítése az új stílusban.</p>
+                </div>
+            </div>
+            <div class="p-8 rounded-2xl bg-[#FAFAFA] border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-black group-hover:bg-[#FF5722] transition-colors text-white rounded-full flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold group-hover:text-[#FF5722] transition-colors leading-tight">Vizuális stratégia</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-6 flex-grow">A sikeres arculat alapja. Mielőtt bármit is megrajzolnánk, tisztázzuk a pontos irányt: kinek szól a céged, mit ígér, és miben más, mint a többiek. Ebből derül ki, milyen vizuális nyelven kell beszélnünk a vevőidhez.</p>
+                <div class="pt-5 border-t border-gray-200 shrink-0">
+                    <p class="text-sm font-semibold text-[#FF5722] mb-1">Mik tartoznak ide?</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">Célközönség vizuális meghatározása, versenytársak elemzése, hangulattáblák (moodboardok) készítése, és a kreatív koncepció vagy vizuális iránytű felállítása.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto flex items-stretch">
+            <div class="p-8 rounded-2xl bg-[#FAFAFA] border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-black group-hover:bg-[#FF5722] transition-colors text-white rounded-full flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold group-hover:text-[#FF5722] transition-colors leading-tight">Weboldal & App <br><span class="text-sm font-semibold text-gray-500 group-hover:text-[#FF5722] transition-colors">(UI/UX)</span></h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-6 flex-grow">A céged arculatára építve megtervezem az online otthonodat. Olyan letisztult, logikus és felhasználóbarát felületeket hozok létre, ami nem csak jl néz ki, de élmény használni – és ami a legfontosabb: vevőket hoznak (konvertálnak).</p>
+                <div class="pt-5 border-t border-gray-200 shrink-0">
+                    <p class="text-sm font-semibold text-[#FF5722] mb-1">Mik tartoznak ide?</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">Bemutatkozó weboldalak, webshop felületek, érkező oldalak (landing page-ek), mobilra optimalizált (reszponzív) nézetek, gombok és navigációs menük megtervezése.</p>
+                </div>
+            </div>
+            <div class="p-8 rounded-2xl bg-[#FAFAFA] border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-black group-hover:bg-[#FF5722] transition-colors text-white rounded-full flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold group-hover:text-[#FF5722] transition-colors leading-tight">Vizuális audit <br><span class="text-sm font-semibold text-gray-500 group-hover:text-[#FF5722] transition-colors">(Arculat- és webelemzés)</span></h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-6 flex-grow">Meglévő megjelenésed szakértői áttekintése. Kívülálló, profi szemmel nézem át a jelenlegi anyagaidat. Feltérképezem a gyenge pontokat, ahol ügyfeleket veszíthetsz, és konkrét lépéseket javaslok a javításra.</p>
+                <div class="pt-5 border-t border-gray-200 shrink-0">
+                    <p class="text-sm font-semibold text-[#FF5722] mb-1">Mik tartoznak ide?</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">Weboldalad használhatóságának (UX) tesztelése, arculati hibák keresése, a vizuális kommunikációd egységességének vizsgálata, és egy részletes javaslatcsomag a továbblépéshez. Plusz egy szubjektív vélemény tőlem ha szeretnéd. :) </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="munkaim" class="py-24 bg-[#FAFAFA]">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+            Kiemelt <span class="underline-playful">munkáim</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="portfolio-card block bg-white rounded-xl shadow-sm">
+                <img src="munkaim/spulni_munka.jpg" alt="Studio N°7" class="w-full h-80 object-cover">
+                <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Nagy arculat tervezés</p>
+            <h3 class="text-2xl font-bold mb-2">Spulni Varróház Felsőzsolca</h3>
+                </div>
+            </div>
+            <div class="portfolio-card block bg-white rounded-xl shadow-sm">
+                <img src="munkaim/szendrey.jpg" alt="Barna Kávépörkölő" class="w-full h-80 object-cover">
+                <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Kis arculat tervezés</p>
+            <h3 class="text-2xl font-bold mb-2">Szendrey kertészet Felsőzsolca</h3>
+                </div>
+            </div>
+            <div class="portfolio-card block bg-white rounded-xl shadow-sm">
+                <img src="munkaim/wantedsound.jpg" alt="Éclat" class="w-full h-80 object-cover">
+                <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">CD borító, kis arculat</p>
+            <h3 class="text-2xl font-bold mb-2">Wanted Sound | Miskolc</h3>
+                </div>
+            </div>
+            <div class="portfolio-card block bg-white rounded-xl shadow-sm">
+                <img src="munkaim/prober3.jpg" alt="Seloan" class="w-full h-80 object-cover">
+                <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+                     <h3 class="text-2xl font-bold mb-2">probergep.hu weboldal tervezés</h3>
+                </div>
+            </div>
+            <div class="portfolio-card block bg-white rounded-xl shadow-sm">
+                <img src="munkaim/fotoh.jpg" alt="Pure Lab" class="w-full h-80 object-cover">
+                <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Webdesign</p>
+            <h3 class="text-2xl font-bold mb-2">fototh.hu weboldal tervezés</h3>
+                </div>
+            </div>
+            <div class="portfolio-card block bg-white rounded-xl shadow-sm">
+                <img src="munkaim/helynekem.jpg" alt="Formák Fesztivál" class="w-full h-80 object-cover">
+                <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="text-sm uppercase tracking-wider text-[#FF5722] font-semibold mb-1">Dekoráció tervezés és kivitelezés</p>
+                    <h3 class="text-2xl font-bold mb-2">Helynekem x HEX | Miskolc</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16 text-center">
+            <a href="munkaim.html" class="inline-block bg-[#1A1A1A] text-white px-10 py-4 rounded-full font-semibold hover:bg-[#FF5722] hover:-translate-y-1 transition-all duration-300">
+                További munkáim megtekintése
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="rolam" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center">
+            Néhány szó <span class="underline-playful">rólam</span>
+        </h2>
+        
+        <div class="flex flex-col md:flex-row items-stretch gap-12">
+            <div class="md:w-1/2 space-y-8 flex flex-col justify-center">
+                <div>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Kolumbán Szabolcs vagyok, Grafikus & Visual artist. Hiszek a jó kommunikációban, így ha kezdettől fogva Veled dolgozom akkor együtt egy szuper dolgot tudunk létrehozni. Erősségem, hogy tudok rajzolni így ha van digitálisan nem kivitelezhető víziód első körben akkor azt gyorsan le tudom skiccelni és egyből látjuk a végeredményt. 
+                        <br> </br>
+                        Bízom benne, hogy akár digitális akár famentes, maszatos az a bizonyos első lap, meg tudunk egyezni és létre tudunk hozni valami egészen jót, ami nem "csak tetszik" hanem valóban működik is.
+                        <br> </br>
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="https://felsozsolca.hu/kolumban-szabolcs-pop-art-kiallitas-nyilt-a-barczay-kastelyban/" target="_blank" rel="noopener noreferrer" class="block p-4 bg-[#FAFAFA] rounded-xl border border-gray-100 hover:border-[#FF5722] hover:shadow-md transition-all group">
+                        <div class="w-full h-28 mb-3 rounded-lg overflow-hidden bg-gray-200">
+                            <img src="rolampopart_1.jpg" alt="Fotós" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-bold text-gray-800 group-hover:text-[#FF5722] transition-colors">Pop Art kiállítás</h4>
+                        <p class="text-sm text-gray-500 mt-1">Első kiállításom Felsőzsolcán</p>
+                    </a>
+                    <a href="https://www.behance.net/gallery/229052113/Parasztvakitas-Pop-art-exhibition-in-Emod" target="_blank" rel="noopener noreferrer" class="block p-4 bg-[#FAFAFA] rounded-xl border border-gray-100 hover:border-[#FF5722] hover:shadow-md transition-all group">
+                        <div class="w-full h-28 mb-3 rounded-lg overflow-hidden bg-gray-200">
+                            <img src="emod_2.jpg" alt="Bőrművesség" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-bold text-gray-800 group-hover:text-[#FF5722] transition-colors">Parasztvakítás kiállítás</h4>
+                        <p class="text-sm text-gray-500 mt-1">Emődön a következő kiállítom</p>
+                    </a>
+                    <a href="https://gmszabocs.github.io" target="_blank" rel="noopener noreferrer" class="block p-4 bg-[#FAFAFA] rounded-xl border border-gray-100 hover:border-[#FF5722] hover:shadow-md transition-all group">
+                        <div class="w-full h-28 mb-3 rounded-lg overflow-hidden bg-gray-200">
+                            <img src="szabox_3.jpg" alt="Szakmai cikk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-bold text-gray-800 group-hover:text-[#FF5722] transition-colors">Angol nyelvű weboldalam</h4>
+                        <p class="text-sm text-gray-500 mt-1">Fejlesztés alatt!</p>
+                    </a>
+                    <a href="https://muvesz.ma/bemutatjuk-kolumban-szabolcs-kepzomuvesz/" target="_blank" rel="noopener noreferrer" class="block p-4 bg-[#FAFAFA] rounded-xl border border-gray-100 hover:border-[#FF5722] hover:shadow-md transition-all group">
+                        <div class="w-full h-28 mb-3 rounded-lg overflow-hidden bg-gray-200">
+                            <img src="muveszma_4.jpg" alt="Szakmai cikk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h4 class="font-bold text-gray-800 group-hover:text-[#FF5722] transition-colors">Legutóbbi muvesz.ma megjelenés</h4>
+                        <p class="text-sm text-gray-500 mt-1">Képzőművészeti alkotásaimról egy írás, szakmai magazinban</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 w-full mt-12 md:mt-0">
+                <img src="rolam.jpg" alt="Kolumbán Szabolcs" class="rounded-2xl shadow-2xl object-cover w-full h-full min-h-[500px]">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="kapcsolat" class="py-24 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-[#FAFAFA] rounded-3xl p-10 md:p-20 border border-gray-100 flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="underline-playful">Vágjunk</span> bele!
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                        Beszéljünk a projektedről! Hívj fel, vagy dobj egy emailt, és nézzük meg, hogyan tudunk együttműködni.
+                    </p>
+                    <br> </br>
+                <div class="space-y-6">
+                    <a href="tel:+36205771308" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-[#FF5722] transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Telefon</p>
+                            <p class="text-2xl font-bold group-hover:text-[#FF5722] transition-colors">+36 20 577 1308</p>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@szabox.hu" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-[#FF5722] transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Email</p>
+                            <p class="text-2xl font-bold group-hover:text-[#FF5722] transition-colors">kolumban@szabox.hu</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <form action="https://formspree.io/f/meeydgal" method="POST" class="space-y-6">
+    <div>
+        <label class="block text-sm font-semibold mb-2">Név</label>
+        <input type="text" name="nev" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="Kovács János">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold mb-2">Email</label>
+        <input type="email" name="email" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="hello@ceged.hu">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold mb-2">Üzenet</label>
+        <textarea rows="4" name="uzenet" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="Röviden a projektről..."></textarea>
+    </div>
+    <button type="submit" class="w-full bg-[#1A1A1A] text-white font-semibold py-4 rounded-lg hover:bg-[#FF5722] transition-colors">
+        Üzenet küldése
+    </button>
+</form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-white border-t border-gray-100 py-10 text-center text-sm text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2026 Kolumbán Szabolcs - szabox.hu</p>
+        <div class="flex space-x-6">
+            <a href="https://www.instagram.com/gm_szabocs/" class="hover:text-black transition-colors">Instagram</a>
+            <a href="https://www.behance.net/szabolcskolumban" class="hover:text-black transition-colors">Behance</a>
+            <a href="linkedin.com/in/szabolcskolumban" class="hover:text-black transition-colors">LinkedIn</a>
+            <a href="https://www.facebook.com/szabolcs.kolumban" class="hover:text-black transition-colors">Facebook</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
