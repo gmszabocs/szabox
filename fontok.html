@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontok | Kolumbán Szabolcs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <meta property="og:image" content="https://szabox.hu/megosztasikep.jpg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+            color: #1A1A1A;
+        }
+        .underline-playful {
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+            z-index: 1;
+        }
+        .underline-playful::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: -2%;
+            width: 104%;
+            height: 8px;
+            background-color: #FF5722;
+            z-index: -1;
+            transform: rotate(-2deg);
+            border-radius: 4px;
+        }
+        .font-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+        .font-card { display: block; position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 1 / 1; background: #fff; box-shadow: 0 1px 4px #0000000d; }
+        .font-card img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+        a.font-card:hover img { transform: scale(1.04); }
+        a.font-card:focus-visible { outline: 3px solid #FF5722; outline-offset: 5px; }
+        .download-label { position: absolute; right: 1rem; bottom: 1rem; display: flex; align-items: center; gap: .5rem; padding: .7rem 1rem; background: #1a1a1a; color: #fff; border-radius: 999px; font-size: .875rem; font-weight: 600; transition: background .2s ease; }
+        a.font-card:hover .download-label, a.font-card:focus-visible .download-label { background: #FF5722; }
+        @media (max-width: 639px) { .font-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+        @media (prefers-reduced-motion: reduce) { .font-card img, .download-label { transition: none; } a.font-card:hover img { transform: none; } }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+<header class="fixed w-full top-0 bg-[#FAFAFA]/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold tracking-tight">Kolumbán Szabolcs</a>
+        
+        <!-- Asztali menü -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="index.html#szolgaltatasok" class="hover:text-[#FF5722] transition-colors">Szolgáltatások</a>
+            <a href="munkaim.html" class="hover:text-[#FF5722] transition-colors">Munkáim</a>
+            <a href="index.html#rolam" class="hover:text-[#FF5722] transition-colors">Rólam</a>
+            <a href="#kapcsolat" class="hover:text-[#FF5722] transition-colors">Kapcsolat</a>
+        </nav>
+
+        <!-- Hamburger gomb (Mobil) -->
+        <button type="button" aria-label="Menü megnyitása" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn" class="md:hidden flex items-center p-2 text-gray-800 hover:text-[#FF5722] focus:outline-none transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobil menü (Lenyíló rész) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FAFAFA] border-t border-gray-100 absolute w-full shadow-lg">
+        <nav class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
+            <a href="index.html#szolgaltatasok" class="mobile-link hover:text-[#FF5722] transition-colors">Szolgáltatások</a>
+            <a href="munkaim.html" class="mobile-link hover:text-[#FF5722] transition-colors">Munkáim</a>
+            <a href="index.html#rolam" class="mobile-link hover:text-[#FF5722] transition-colors">Rólam</a>
+            <a href="#kapcsolat" class="mobile-link hover:text-[#FF5722] transition-colors">Kapcsolat</a>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-grow pt-32 pb-24 md:pt-48">
+    <div class="max-w-7xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">
+            Letölthető <span class="underline-playful">fontok</span>
+        </h1>
+        <p class="text-center text-gray-600 mb-16">Kattints a képre a betűtípus letöltéséhez!</p>
+        <div class="font-grid" aria-label="Letölthető betűtípusok">
+            <!-- 1. font: a kép és az archívum a fontok.html fájl mellé kerüljön. -->
+            <a class="font-card" href="MotsuPonz.rar" download="MotsuPonz.rar" aria-label="MotsuPonz betűtípus letöltése (RAR)">
+                <img src="fontok_1.jpg" alt="YutoONEfont – MotsuPonz betűtípus, narancssárga japán kapu előtt" width="1200" height="1200" fetchpriority="high">
+                <span class="download-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Letöltés · RAR
+                </span>
+            </a>
+            <!-- 2. font: a kép és a letölthető fájl a fontok.html mellé kerüljön. -->
+            <a class="font-card" href="Y1QuickBlitz.otf" download="Y1QuickBlitz.otf" aria-label="QuickBlitz betűtípus letöltése (OTF)">
+                <img src="fontok_2.jpg" alt="QuickBlitz betűtípus bemutatója" width="1200" height="1200" loading="lazy">
+                <span class="download-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Letöltés · OTF
+                </span>
+            </a>
+            <!-- 3. font: a kép és a letölthető fájl a fontok.html mellé kerüljön. -->
+            <a class="font-card" href="VillainismSerif.rar" download="VillainismSerif.rar" aria-label="VillainismSerif betűtípus letöltése (RAR)">
+                <img src="fontok_3.jpg" alt="VillainismSerif betűtípus bemutatója" width="1200" height="1200" loading="lazy">
+                <span class="download-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Letöltés · RAR
+                </span>
+            </a>
+            <!-- 4. font: a kép és a letölthető fájl a fontok.html mellé kerüljön. -->
+            <a class="font-card" href="SuidokanFreedom.rar" download="SuidokanFreedom.rar" aria-label="SuidokanFreedom betűtípus letöltése (RAR)">
+                <img src="fontok_4.jpg" alt="SuidokanFreedom betűtípus bemutatója" width="1200" height="1200" loading="lazy">
+                <span class="download-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Letöltés · RAR
+                </span>
+            </a>
+        </div>
+    </div>
+</main>
+
+<section id="kapcsolat" class="py-24 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-[#FAFAFA] rounded-3xl p-10 md:p-20 border border-gray-100 flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="underline-playful">Vágjunk</span> bele!
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                        Beszéljünk a projektedről! Hívj fel, vagy dobj egy emailt, és nézzük meg, hogyan tudunk együttműködni.
+                    </p>
+                    <br>
+                <div class="space-y-6">
+                    <a href="tel:+36205771308" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-[#FF5722] transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Telefon</p>
+                            <p class="text-1xl font-bold group-hover:text-[#FF5722] transition-colors">+36 20 577 1308</p>
+                        </div>
+                    </a>
+                    <a href="mailto:kolumban@szabox.hu" class="flex items-start gap-4 group">
+                        <div class="shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:bg-[#FF5722] transition-colors mt-1">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div class="overflow-hidden">
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Email</p>
+                            <p class="text-1xl font-bold group-hover:text-[#FF5722] transition-colors truncate sm:whitespace-normal">kolumban@szabox.hu</p>
+                        </div>
+                    </a>
+                                    </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <form action="https://formspree.io/f/meeydgal" method="POST" class="space-y-6">
+    <div>
+        <label class="block text-sm font-semibold mb-2">Név</label>
+        <input type="text" name="nev" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="Kovács János">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold mb-2">Email</label>
+        <input type="email" name="email" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="hello@ceged.hu">
+    </div>
+    <div>
+        <label class="block text-sm font-semibold mb-2">Üzenet</label>
+        <textarea rows="4" name="uzenet" required class="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-[#FF5722] focus:ring-1 focus:ring-[#FF5722] transition-colors" placeholder="Röviden a projektről..."></textarea>
+    </div>
+    
+    <div class="flex items-start gap-3">
+        <input type="checkbox" id="adatkezeles" name="adatkezeles" required class="mt-1 w-5 h-5 text-[#FF5722] border-gray-300 rounded focus:ring-[#FF5722] cursor-pointer shrink-0">
+        <label for="adatkezeles" class="text-sm text-gray-600 cursor-pointer select-none leading-relaxed">
+            Kijelentem, hogy megismertem és elfogadom az <a href="cookie.html" target="_blank" class="text-[#FF5722] hover:underline font-semibold">Adatkezelési Tájékoztatóban</a> foglaltakat.
+        </label>
+    </div>
+
+    <button type="submit" class="w-full bg-[#1A1A1A] text-white font-semibold py-4 rounded-lg hover:bg-[#FF5722] transition-colors">
+        Üzenet küldése
+    </button>
+</form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-white border-t border-gray-100 py-10 text-center text-sm text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2026 Kolumbán Szabolcs - szabox.hu</p>
+        <a href="cookie.html" class="hover:text-[#FF5722] transition-colors">Adatvédelem és Cookie használat</a>
+                <div class="flex space-x-6">
+            <a href="https://www.instagram.com/gm_szabocs/" class="hover:text-black transition-colors">Instagram</a>
+            <a href="https://www.behance.net/szabolcskolumban" class="hover:text-black transition-colors">Behance</a>
+            <a href="https://www.linkedin.com/in/szabolcskolumban/" class="hover:text-black transition-colors">LinkedIn</a>
+            <a href="https://www.facebook.com/profile.php?id=61593678674418" class="hover:text-black transition-colors">Facebook</a>
+        </div>
+        
+        <p>A weboldal MI által módosított képet is tartalmazhat.</p>
+
+    </div>
+</footer>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    function setMenu(open) {
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
+    }
+    btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); }
+    });
+</script>
+</body>
+</html>
